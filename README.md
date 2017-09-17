@@ -18,3 +18,8 @@ requests==2.18.4
 > Info
 - email : wzw15517028333@gmail.com
 - wechat : 15517028333 
+
+>Todo
+
+- Add the Sock5 proxy
+- Multithreading
