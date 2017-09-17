@@ -14,8 +14,6 @@ class t66y(object):
     
     def __init__(self):
         self.url = 'http://t66y.com/thread0806.php?fid=16'
-        self.sock5 = '127.0.0.1'
-        self.socks_port = 1080
 
     def requestspic(self, url, Referer):
         '''
