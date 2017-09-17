@@ -7,8 +7,6 @@ import requests
 from bs4 import BeautifulSoup
 import random
 import os
-import socket
-import socks
 import requests
 
 
@@ -68,21 +66,6 @@ class t66y(object):
         }
         content = requests.get(url, headers=header, verify=False)
         return content
-
-    def set_socks_proxy(self):
-        """
-        for ss
-        set_sock5_proxy
-        :return:
-        """
-        try:
-            socks.set_default_proxy(socks.SOCKS5, self.sock5, self.socks_port)
-            socket.socket = socks.socksocket
-        except BaseException as e:
-            print('error:', e)
-        else:
-            current_ip = requests.get('http://ifconfig.me/ip').text
-            print('Your current ip is: %s' % current_ip)
 
     def all_url(self):
         """
