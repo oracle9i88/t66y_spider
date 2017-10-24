@@ -13,6 +13,7 @@ class t66y(object):
     
     def __init__(self):
         self.url = 'http://t66y.com/thread0806.php?fid=16'
+        self.c_path = os.getcwd()
 
     def requestspic(self, url, Referer):
         '''
@@ -88,11 +89,11 @@ class t66y(object):
         :param path: path_name
         '''
         path = path.strip()
-        isExists = os.path.exists(os.path.join("C://t66y", path))
+        isExists = os.path.exists(os.path.join(self.c_path, path))
         if not isExists:
             print(' Create %s folder!' % path)
-            os.makedirs(os.path.join("C://t66y", path))
-            os.chdir(os.path.join("C://t66y", path))  ##切换到目录
+            os.makedirs(os.path.join(self.c_path, path))
+            os.chdir(os.path.join(self.c_path, path))  ##切换到目录
             return True
         else:
             print('%s The folder already exists !' % path)
@@ -101,7 +102,7 @@ class t66y(object):
     def img(self, page_url):
         """
         :param page_url: page_url
-        self.save() download img to C:\t66y
+        self.save() download img to os.getcwd()
         """
         img_html = self.request(page_url)
         bsObj = BeautifulSoup(img_html.text, "html.parser")
