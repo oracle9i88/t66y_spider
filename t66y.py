@@ -7,7 +7,6 @@ import requests
 from bs4 import BeautifulSoup
 import random
 import os
-import requests
 
 
 class t66y(object):
