@@ -1,6 +1,6 @@
 # t66y.com
 
-Grass carp community reptile, the main collection of Dagel's banner boutique post pictures .
+修改 socks5 代理
 
 **Mainland network environment agent**
 
@@ -9,17 +9,14 @@ Grass carp community reptile, the main collection of Dagel's banner boutique pos
 - pip3 install requirements.txt 
 
 ```txt
-beautifulsoup4==4.6.0
-requests==2.18.4
+aiohttp
+aiosocks
+
 ```
-- python3 t66y.py
+- python t66y.py
 
 
 > Info
 - email : wzw15517028333@gmail.com
 - wechat : 15517028333 
 
->Todo
-
-- Add the Sock5 proxy
-- Multithreading
